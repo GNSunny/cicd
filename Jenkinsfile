@@ -1,15 +1,12 @@
 pipeline {
     agent any
     environment {
-        //be sure to replace "willbla" with your own Docker Hub username
         DOCKER_IMAGE_NAME = "sunnynehar56/degree53"
     }
     stages {
         stage('Build') {
             steps {
-                echo 'Running build automation'
-                sh './gradlew build --no-daemon'
-                archiveArtifacts artifacts: 'dist/trainSchedule.zip'
+              git 'https://github.com/justmeandopensource/playjenkins.git'
             }
         }
         stage('Build Docker Image') {
