@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout Source') {
             steps {
-              git 'https://github.com/justmeandopensource/playjenkins.git'
+              git 'https://github.com/sunnynehar56/cicd.git'
             }
         }
         stage('Build Docker Image') {
