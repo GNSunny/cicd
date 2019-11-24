@@ -4,7 +4,7 @@ pipeline {
         DOCKER_IMAGE_NAME = "sunnynehar56/degree53"
     }
     stages {
-        stage('Build') {
+        stage('Checkout Source') {
             steps {
               git 'https://github.com/justmeandopensource/playjenkins.git'
             }
