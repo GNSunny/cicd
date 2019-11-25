@@ -9,8 +9,7 @@ spec:
   ports:
   - nodePort: 32223
     port: 80
-    protocol: TCP
-    targetPort: 80
+    protocol: TCP   
     
 ---
 apiVersion: apps/v1
@@ -33,5 +32,5 @@ spec:
       - name: myweb
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         imagePullPolicy: Always
-         ports:
-         - containerPort: 80
+        ports:
+        - containerPort: 80
