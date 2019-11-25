@@ -1,5 +1,6 @@
 FROM nginx:stable-alpine
-COPY ./index.html /usr/share/nginx/html/old-index.html
+RUN mv /usr/share/nginx/html/index.html /usr/share/nginx/html/old-index.html
+COPY ./index.html /usr/share/nginx/html/
 
 
 # The container will listen on port 80 using the TCP protocol.
