@@ -1,2 +1,6 @@
-FROM httpd:2.4
-COPY ./index.html /usr/local/apache2/htdocs/
+FROM nginx:stable-alpine
+COPY ./index.html /usr/share/nginx/html/old-index.html
+
+
+# The container will listen on port 80 using the TCP protocol.
+EXPOSE 80
