@@ -7,9 +7,10 @@ spec:
   selector:
     app: myweb
   ports:
-  - protocol: TCP  
-    port: 8081
-    nodePort: 8081
+ - nodePort: 32223
+    port: 80
+    protocol: TCP
+    targetPort: 80
     
 ---
 apiVersion: apps/v1
@@ -32,5 +33,3 @@ spec:
       - name: myweb
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         imagePullPolicy: Always
-        ports:
-        - containerPort: 8081
