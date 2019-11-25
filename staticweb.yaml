@@ -33,3 +33,5 @@ spec:
       - name: myweb
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         imagePullPolicy: Always
+         ports:
+         - containerPort: 80
